@@ -1,0 +1,58 @@
+const getSleepHours = day => {
+switch (day){
+case 'monday':
+return 8
+break
+case 'tuesday':
+return 7
+break
+case 'wednesday':
+return 5
+break
+case 'thursday':
+return 4
+break
+case 'friday':
+return 5
+break
+case 'saturday':
+return 6
+break
+case 'sunday':
+return 8
+break
+default:
+return 'error'
+  }
+}
+
+//console.log(getSleepHours('Monday'))
+
+
+const getActualSleepHours = () => 
+getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday')
+
+ console.log(getActualSleepHours())  
+ //is there a way to make the day of the week lowercase regardless of what is typed in?
+
+const getIdealSleepHours = () => {
+ let idealHours = 8.5
+  return idealHours * 7
+}
+//console.log(getIdealSleepHours())
+
+const calculateSleepDebt = () => {  
+let actualSleepHours = getActualSleepHours()
+let idealSleepHours = getIdealSleepHours()
+if (actualSleepHours === idealSleepHours ){
+  console.log('perfect amount of sleep')
+} else if (actualSleepHours > idealSleepHours){
+  console.log(`got ${actualSleepHours - idealSleepHours} more sleep than needed`)
+}else if (actualSleepHours < idealSleepHours) {
+  console.log(`you should get some rest, your sleep deficit is ${actualSleepHours - idealSleepHours} hours`)
+  }else {
+    console.log('something is wrong, check code')
+  }
+} 
+calculateSleepDebt()
+
