@@ -1,0 +1,24 @@
+let input = 'louie'
+const vowels = ['a', 'e', 'i', 'o', 'u']
+let resutlArray = []
+for (i = 0; i < input.length; i++){
+  //console.log(`i is ${i}`)
+  if(input[i] === 'e'){
+    resultArray.push(input[i])
+  }if(input[i] === 'u'){
+     resultArray.push(input[i])
+  }
+    for(v = 0; v < vowels.length; v++){
+      //console.log(`v is ${v}`)
+      if(input[i] === vowels[v]){
+        //console.log(input[i])
+        resultArray.push(input[i])
+        //console.log(resultArray)
+      }
+    }
+  
+}
+//console.log(resultArray)
+
+let resultString = resultArray.join('').toUpperCase()
+console.log(resultString)
